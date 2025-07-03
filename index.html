@@ -1,0 +1,202 @@
+index.html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>ShopWithriddhi - Home Decoration</title>
+<style>
+  /* Dark theme background and text */
+  body {
+    background-color: #121212;
+    color: #e0e0e0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0; padding: 20px;
+  }
+
+  h1, h2 {
+    text-align: center;
+    color: #fff;
+  }
+
+  .product-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .product-card {
+    background-color: #1e1e1e;
+    border-radius: 12px;
+    width: 280px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.6);
+    padding: 15px;
+    transition: transform 0.3s;
+  }
+  .product-card:hover {
+    transform: scale(1.05);
+  }
+
+  .product-image {
+    width: 100%;
+    border-radius: 10px;
+    height: 180px;
+    object-fit: cover;
+  }
+
+  .product-name {
+    font-size: 20px;
+    margin: 10px 0 5px;
+    color: #ffa500;
+  }
+
+  .product-details {
+    font-size: 14px;
+    margin-bottom: 10px;
+    color: #ccc;
+  }
+
+  .price {
+    font-weight: bold;
+    font-size: 18px;
+    color: #00ff99;
+    margin-bottom: 10px;
+  }
+
+  .shipping-time {
+    font-style: italic;
+    font-size: 13px;
+    color: #999;
+    margin-bottom: 15px;
+  }
+
+  form {
+    max-width: 400px;
+    margin: 40px auto 20px auto;
+    background-color: #1e1e1e;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 0 12px rgba(0,0,0,0.7);
+  }
+
+  form h2 {
+    color: #ffa500;
+    margin-bottom: 15px;
+    text-align: center;
+  }
+
+  input, select, textarea, button {
+    width: 100%;
+    margin-top: 12px;
+    padding: 10px;
+    border-radius: 8px;
+    border: none;
+    font-size: 15px;
+  }
+
+  input, select, textarea {
+    background-color: #333;
+    color: #eee;
+  }
+
+  input::placeholder, textarea::placeholder {
+    color: #bbb;
+  }
+
+  button {
+    background-color: #00ff99;
+    color: #121212;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  button:hover {
+    background-color: #00cc7a;
+  }
+
+</style>
+</head>
+<body>
+
+<h1>Welcome to ShopWithriddhi</h1>
+<h2>Exclusive Home Decoration Collection</h2>
+
+<div class="product-list">
+
+  <!-- Product 1 -->
+  <div class="product-card">
+    <img class="product-image" src="https://via.placeholder.com/280x180.png?text=Wall+Painting" alt="Wall Painting" />
+    <div class="product-name">Elegant Wall Painting</div>
+    <div class="product-details">Color: Blue, Size: 24x36 inch</div>
+    <div class="price">$75</div>
+    <div class="shipping-time">Ships in 5-7 days</div>
+  </div>
+
+  <!-- Product 2 -->
+  <div class="product-card">
+    <img class="product-image" src="https://via.placeholder.com/280x180.png?text=Table+Lamp" alt="Table Lamp" />
+    <div class="product-name">Classic Table Lamp</div>
+    <div class="product-details">Color: White, Size: Medium</div>
+    <div class="price">$50</div>
+    <div class="shipping-time">Ships in 3-5 days</div>
+  </div>
+
+  <!-- Product 3 -->
+  <div class="product-card">
+    <img class="product-image" src="https://via.placeholder.com/280x180.png?text=Candle+Set" alt="Candle Set" />
+    <div class="product-name">Scented Candle Set</div>
+    <div class="product-details">Color: Assorted, Size: Small</div>
+    <div class="price">$30</div>
+    <div class="shipping-time">Ships in 2-4 days</div>
+  </div>
+
+</div>
+
+<form action="https://formspree.io/f/YOUR-FORM-ID" method="POST">
+  <h2>Place Your Order</h2>
+  <input type="text" name="name" placeholder="Your Full Name" required />
+  <input type="email" name="email" placeholder="Your Email" required />
+  <input type="text" name="address" placeholder="Shipping Address" required />
+  <input type="text" name="country" placeholder="Country" required />
+  
+  <label for="product">Select Product:</label>
+  <select name="product" id="product" required>
+    <option value="">-- Choose Product --</option>
+    <option value="Elegant Wall Painting">Elegant Wall Painting</option>
+    <option value="Classic Table Lamp">Classic Table Lamp</option>
+    <option value="Scented Candle Set">Scented Candle Set</option>
+  </select>
+
+  <label for="color">Choose Color:</label>
+  <select name="color" id="color" required>
+    <option value="">-- Choose Color --</option>
+    <option value="Blue">Blue</option>
+    <option value="White">White</option>
+    <option value="Assorted">Assorted</option>
+  </select>
+
+  <label for="size">Choose Size:</label>
+  <select name="size" id="size" required>
+    <option value="">-- Choose Size --</option>
+    <option value="24x36 inch">24x36 inch</option>
+    <option value="Medium">Medium</option>
+    <option value="Small">Small</option>
+  </select>
+
+  <label for="shipping">Shipping Time:</label>
+  <select name="shipping" id="shipping" required>
+    <option value="">-- Choose Shipping Time --</option>
+    <option value="5-7 days">5-7 days</option>
+    <option value="3-5 days">3-5 days</option>
+    <option value="2-4 days">2-4 days</option>
+  </select>
+
+  <textarea name="note" placeholder="Any special instructions or notes?"></textarea>
+
+  <button type="submit">Place Order</button>
+</form>
+
+</body>
+</html>
+Add index.html
